@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b85be5f679.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+       <nav>
+           <img src="logo.png.jpg" class="logo">
+           <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+         </ul>
+         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+       </nav>
+       <div class="text-animate">
+          <p>ELECTRONIC ENGINEER</p>
+          <h1>Hi, I'm <span> Jagadeesh</span><br> from India</h1>
+       </div>
+
+    </div>
+</div>
+<!-- -----------about------------ --->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="user.png.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me<h1>
+                 <p>I am G.Jagadeesh, Persuring 4th Btech in Miracle educational society group of 
+                    institutions, from the department of Electronic And Communication Engineering.</p>
+
+                 <div class="tab-titles">
+                       <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                       <p class="tab-links" onclick="opentab('experience')"></p>
+                       <p class="tab-links" onclick="opentab('education')"></p>
+                    </div>                   
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C</span><br>Basics in C language</li>
+                            <li><span>PYTHON</span><br>Basics in PYTHON</li>
+                            <li><span>JAVA</span><br>Basics in JAVA</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content active-tab" id="experience">
+                        <ul>
+                            <li><span>Education</span><br></li>                                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                       <ul>
+                           <li><span>2023</span><br>Persuring 4th Btech</li>
+                           <li><span>2020</span><br>Intermediate(M.P.C) From SASI Jr.college</li>
+                           <li><span>2018</span><br>10th Class from THE SUN SCHOOL</li>
+                       </ul>
+                 </div>               
+             </div> 
+        </div>
+    </div>
+</div>
+<!-- -------services------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-sharp fa-solid fa-c" style="color: #06460e;"></i>
+                <h2>C language</h2>
+                <p1>no services.</p1>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop" style="color: #2c511f;"></i>
+                <h2>PYTHON</h2>
+                <p1>no services.</p1>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code" style="color: #1f5120;"></i>
+                <h2>JAVA</h2>
+                <p1>no services</p1>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------contact---------- -->
+<div id="contect">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contect Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>gadujagadeesh@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone-flip"></i>6301445260</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook" style="color: #4b0ddb;"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram" style="color: #f10c0c;"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin" style="color: #4c08ea;"></i></a>
+                    <a href=""><i class="fa-brands fa-telegram" style="color: #0a2cdb;"></i></a>
+                </div>
+                <a href="my-resume.pdf" download class="btn btn2">resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+                <span id="msg">hello</span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright Jaga. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+    </div>
+</div>
+
+     <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){ 
+            for(tablink of tablinks){              
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents){       
+                tabcontent.classlist.remove("active-tab");
+            }
+        }
+
+     </script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwg0c6UTnup1A_swauQyeESWgeKLsqZcqey9GBWv6vIKyWdGakDHtX42eo7XjV3xQq9/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfuly"
+            setTimeout(function(){
+                msg.innerhtml = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+ 
+
+</body>
+</html>
